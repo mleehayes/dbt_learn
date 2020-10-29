@@ -1,19 +1,22 @@
 ## Jumpstart Modules
 Which week are you submitting completed practice exercises for? 
 <!--- Use an x in the brackets to mark the week you are submitting for -->
-- [X] Week 1 (Models)
-- [ ] Week 2 (Tests, Docs, Sources)
+- [ ] Week 1 (Models)
+- [x] Week 2 (Tests, Docs, Sources)
 - [ ] Week 3 (Jinja, Macros, Packages)
 - [ ] Week 4 (Materializations, Analyses, Seeds)
 ## Focus the feedback
 What models/macros/files would you like feedback on?  Be specific.
-dim_cusotmers.sql, please
+
 
 These are the questions that I jotted down while I was working through the training:
-1	how long are model execution logs preserved?
-2	why did dbt create fields (dim_customers) with data types of varchar(16777216)?
-3   Why did dbt execute models sequentially?
-4   In Modularity an the ref function,  why did you continue to use cte instead of straight select?
-5   After you've created a dependency on an object (using ref function) how do you find all of the dependent objects so that you can understand the impact of changes?
-6   Is it possible to display the run output on a separate tab instead of overlaying the development console?
-7   is it possible to accidentally create a loop in the dag?
+1 doesn't uniqueness imply not_null?  
+2 are there performance considerations for data tests?  since you're returning a result set,  if the result set is large,  then wouldn't testing performance suffer?  Would using a limit on the number of rows returned help?
+3 why do we have to have "version: 2" at the top of the test document?
+4 how do you stop something that's running?  If I run a sql query,  cancel doesn't seem to do anything.  How do we stop a run of dbt run?
+5-can documentation be consumed by external tools? Could it be imported into a database?
+6 can we comment yml files?
+7 production doesn't necessarily mean a different schema.  could also (and more likely be) a different database
+8 what about capacity?  As multiple developers are excuting concurrently (irrespective of the load on the database) how does dbt handle the load on its resources?
+9 for a job execution, is there a way to view overall performance of each command?  
+
